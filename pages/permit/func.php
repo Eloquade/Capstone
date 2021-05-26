@@ -13,7 +13,7 @@ if(isset($_POST['btn_permit_send'])){
     $con = mysqli_connect('localhost','root','','db_barangay') or die(mysqli_error());
     date_default_timezone_set("Asia/Manila");
 
-    $sql = mysqli_query($con,"INSERT INTO `tblpermit`(fullname,businessName,businessAddress,typeOfBusiness,orNo,samount,dateRecorded,recordedBy,status) VALUES ('$txt_name','$txt_busname','$txt_busadd','$txt_type','$txt_ornum','$s_amount','$date'))";
+    $sql = mysqli_query($con,"INSERT INTO `tblpermit`(fullname,businessName,businessAddress,typeOfBusiness,orNo,samount,dateRecorded,recordedBy,status) VALUES ('$txt_name','$txt_busname','$txt_busadd','$txt_type','$txt_ornum','$s_amount','$date', ''))";
 
     if(mysqli_query($sql)){
         echo '<script>alert("Request Sent Successfully!")</script>';
